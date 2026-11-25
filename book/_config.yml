@@ -1,0 +1,11 @@
+title: Crystal Eye · ACME
+author: Crystal Eye tutorial team
+copyright: ""
+logo: _static/crystal-eye-mark.jpeg
+execute:
+  execute_notebooks: "off"
+exclude_patterns: [_build, README.md, "**/.ipynb_checkpoints", ".DS_Store"]
+sphinx:
+  config:
+    html_show_sourcelink: false
+    myst_heading_anchors: 3

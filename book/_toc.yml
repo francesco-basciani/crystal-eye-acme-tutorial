@@ -1,0 +1,13 @@
+format: jb-book
+root: intro
+parts:
+  - caption: Theory
+    chapters:
+      - file: theory/detector
+      - file: theory/background
+      - file: theory/response
+  - caption: Hands-on
+    chapters:
+      - file: hands-on
+      - file: notebook/Crystal-Eye-ACME-Python
+        title: Student notebook
