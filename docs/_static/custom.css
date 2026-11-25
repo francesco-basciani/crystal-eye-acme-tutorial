@@ -43,8 +43,8 @@ html[data-theme="dark"] {
 .ce-hero .ce-hero-copy > p:last-child { margin-bottom: 0; }
 .ce-hero .ce-hero-visual > p { margin: 0; }
 .ce-hero-visual img { display: block; width: 100%; height: auto; }
-.ce-hero a.reference.internal { color: #bdebf1; }
-.bd-article p > a.reference.external[href^="https://mybinder.org/v2/gh/"] {
+.ce-hero a.reference { color: #bdebf1; }
+.bd-article p > a.reference.internal[href$="Crystal-Eye-ACME-Python.html"] {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
@@ -55,12 +55,12 @@ html[data-theme="dark"] {
   text-decoration: none;
   transition: background-color 130ms ease;
 }
-.ce-hero p > a.reference.external[href^="https://mybinder.org/v2/gh/"] {
+.ce-hero p > a.reference.internal[href$="Crystal-Eye-ACME-Python.html"] {
   border-color: #b0edf2;
   color: #102730;
   background: #b0edf2;
 }
-.ce-hero p > a.reference.external[href^="https://mybinder.org/v2/gh/"]:hover {
+.ce-hero p > a.reference.internal[href$="Crystal-Eye-ACME-Python.html"]:hover {
   background: #e1fcff;
 }
 .ce-hero a:focus-visible { outline: 2px solid #d1f9ff; outline-offset: 4px; }
@@ -142,3 +142,24 @@ html[data-theme="dark"] {
   outline-offset: .23rem;
 }
 .ce-hero a.reference:focus-visible { outline-color: #d1f9ff; }
+
+.ce-live-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .55rem .8rem;
+  padding: .75rem;
+  border: 1px solid var(--ce-border);
+  border-radius: .5rem;
+}
+.ce-live-controls .thebe-launch-button {
+  min-height: 44px;
+  padding: .4rem .85rem;
+  border-radius: .4rem;
+  background: var(--pst-color-primary);
+  color: var(--pst-color-on-primary);
+  font-weight: 700;
+}
+.ce-live-controls .ce-live-status {
+  flex: 1 1 15rem;
+}

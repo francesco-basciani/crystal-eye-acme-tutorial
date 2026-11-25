@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=6a604523" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=d1b187ac" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=08e0ae9d" />
   
   <!-- So that users can add custom icons -->
   <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
@@ -63,6 +63,7 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="_static/acme-live.js?v=a84917b9"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Detector simulation" href="theory/detector.html" />
@@ -395,9 +396,9 @@
 <div class="ce-hero-copy docutils container">
 <p><strong>Crystal Eye · ACME Hands-on</strong></p>
 <p>Can you spot a gamma-ray burst in a fluctuating background? Use simulated detector data to find the burst and estimate where it came from.</p>
-<p><a class="reference external" href="https://mybinder.org/v2/gh/francesco-basciani/crystal-eye-acme-tutorial/81d60271be8130dd3da0866933c0239b1625e72b?urlpath=lab/tree/book/notebook/Crystal-Eye-ACME-Python.ipynb">Launch on Binder</a></p>
-<p><a class="reference external" href="https://2i2c.mybinder.org/v2/gh/francesco-basciani/crystal-eye-acme-tutorial/81d60271be8130dd3da0866933c0239b1625e72b?urlpath=lab/tree/book/notebook/Crystal-Eye-ACME-Python.ipynb">Try the alternate Binder server</a></p>
-<p><a class="reference internal" href="notebook/Crystal-Eye-ACME-Python.html"><span class="std std-doc">Read the student notebook</span></a></p>
+<p><a class="reference internal" href="notebook/Crystal-Eye-ACME-Python.html"><span class="std std-doc">Run Python in the notebook</span></a></p>
+<p><a class="reference external" href="https://mybinder.org/v2/gh/francesco-basciani/crystal-eye-acme-tutorial/7dbbc955a57e2f3938e19b1327837fbccc9c8132?urlpath=lab/tree/book/notebook/Crystal-Eye-ACME-Python.ipynb">Open in JupyterLab on Binder</a></p>
+<p><a class="reference external" href="https://2i2c.mybinder.org/v2/gh/francesco-basciani/crystal-eye-acme-tutorial/7dbbc955a57e2f3938e19b1327837fbccc9c8132?urlpath=lab/tree/book/notebook/Crystal-Eye-ACME-Python.ipynb">Try the alternate Binder server</a></p>
 <p><a class="reference internal" href="hands-on.html"><span class="std std-doc">Read the exercise instructions</span></a></p>
 </div>
 <div class="ce-hero-visual docutils container">
@@ -435,16 +436,16 @@
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "francesco-basciani/crystal-eye-acme-tutorial",
+            ref: "7dbbc955a57e2f3938e19b1327837fbccc9c8132",
         },
         codeMirrorConfig: {
-            theme: "abcdef",
+            theme: "default",
             mode: "python"
         },
         kernelOptions: {
             name: "python3",
-            path: "./."
+            path: "book/."
         },
         predefinedOutput: true
     }

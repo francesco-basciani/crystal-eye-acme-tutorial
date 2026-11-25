@@ -30,4 +30,4 @@ The response-template bank organizes simulated responses for directions spaced b
 Reference directions used to build the template bank.
 ~~~
 
-The [Python burst generator](../notebook/Crystal-Eye-ACME-Python.ipynb#1-generate-a-burst) uses this bank to produce a detector energy spectrum and a count-rate distribution by pixel for a chosen direction and cut-off power law. Localization uses the separate **2° template bank** supplied with the tutorial. It compares the expected source pattern with templates using ROOT’s Kolmogorov–Smirnov histogram test and combines the retained directions.
+The [Python burst generator](../notebook/Crystal-Eye-ACME-Python.ipynb) uses this bank to produce a detector energy spectrum and a count-rate distribution by pixel for a chosen direction and cut-off power law. Localization uses the separate **2° template bank** supplied with the tutorial. It compares the expected source pattern with templates using ROOT’s Kolmogorov–Smirnov histogram test and combines the retained directions.

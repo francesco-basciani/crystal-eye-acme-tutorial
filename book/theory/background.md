@@ -32,4 +32,4 @@ Simulated detector count rates by energy and background component.
 Background across the detector pixels.
 ~~~
 
-In the [Python detection exercise](../notebook/Crystal-Eye-ACME-Python.ipynb#2-detection-when-did-the-counts-rise), watch how the counts fluctuate before the burst. Estimating and subtracting the mean still leaves positive and negative residuals.
+In the [Python detection exercise](../notebook/Crystal-Eye-ACME-Python.ipynb), watch how the counts fluctuate before the burst. Estimating and subtracting the mean still leaves positive and negative residuals.

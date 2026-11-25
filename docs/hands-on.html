@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=6a604523" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=d1b187ac" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=08e0ae9d" />
   
   <!-- So that users can add custom icons -->
   <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
@@ -63,6 +63,7 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'hands-on';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="_static/acme-live.js?v=a84917b9"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Crystal Eye | ACME Hands-on in Python" href="notebook/Crystal-Eye-ACME-Python.html" />
@@ -392,9 +393,10 @@
 <div class="ce-page-lead docutils container">
 <p>Run the Python cells from top to bottom to generate a burst, look for it in the counts, and estimate its incoming direction.</p>
 </div>
-<p><a class="reference external" href="https://mybinder.org/v2/gh/francesco-basciani/crystal-eye-acme-tutorial/81d60271be8130dd3da0866933c0239b1625e72b?urlpath=lab/tree/book/notebook/Crystal-Eye-ACME-Python.ipynb">Launch on Binder</a></p>
+<p><a class="reference internal" href="notebook/Crystal-Eye-ACME-Python.html"><span class="std std-doc">Open the interactive notebook</span></a> and choose <strong>Enable Run buttons</strong>. Run the cells in order once the kernel is ready.</p>
+<p><a class="reference external" href="https://mybinder.org/v2/gh/francesco-basciani/crystal-eye-acme-tutorial/7dbbc955a57e2f3938e19b1327837fbccc9c8132?urlpath=lab/tree/book/notebook/Crystal-Eye-ACME-Python.ipynb">Open in JupyterLab on Binder</a></p>
 <p>Binder opens the notebook in JupyterLab with PyROOT and the workshop inputs ready. Wait for JupyterLab to load, then click <strong>▶ Run</strong> or press <strong>Shift + Enter</strong> to execute each cell. The plots appear below the cells as they run.</p>
-<p>If Binder reports a launch error, <a class="reference external" href="https://2i2c.mybinder.org/v2/gh/francesco-basciani/crystal-eye-acme-tutorial/81d60271be8130dd3da0866933c0239b1625e72b?urlpath=lab/tree/book/notebook/Crystal-Eye-ACME-Python.ipynb">start a fresh session on the alternate server</a>.</p>
+<p>If Binder reports a launch error, <a class="reference external" href="https://2i2c.mybinder.org/v2/gh/francesco-basciani/crystal-eye-acme-tutorial/7dbbc955a57e2f3938e19b1327837fbccc9c8132?urlpath=lab/tree/book/notebook/Crystal-Eye-ACME-Python.ipynb">start a fresh session on the alternate server</a>.</p>
 <ol class="arabic simple">
 <li><p>Run the setup cell once. In <strong>Generate a burst</strong>, run the default parameters, then try a zenith angle of <strong>45°</strong> or reduce the amplitude by a factor of ten.</p></li>
 <li><p>In <strong>Detection</strong>, look for the burst in the noisy counts. Set <strong>reveal_injected = True</strong> and rerun the plot to compare your interpretation with the injected signal.</p></li>
@@ -402,7 +404,7 @@
 </ol>
 <section id="run-locally">
 <h2>Run locally<a class="headerlink" href="#run-locally" title="Link to this heading">#</a></h2>
-<p>To work in your own Jupyter environment, download the <a class="reference download internal" download="" href="_downloads/ebdaf8fae5772e47ce0a4c2ba87113b9/Crystal-Eye-ACME-Python.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">notebook</span></code></a> and the <a class="reference download internal" download="" href="_downloads/0cebed7fb031dd766faad8d97b9a8ffb/crystal_eye_acme.py"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">module</span></code></a> and keep them together. The <a class="reference external" href="https://github.com/francesco-basciani/crystal-eye-acme-tutorial#run-the-notebook">repository setup guide</a> links to the workshop inputs.</p>
+<p>To work in your own Jupyter environment, download the <a class="reference download internal" download="" href="_downloads/ebdaf8fae5772e47ce0a4c2ba87113b9/Crystal-Eye-ACME-Python.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">notebook</span></code></a>. The Python implementations are included in its cells. The <a class="reference external" href="https://github.com/francesco-basciani/crystal-eye-acme-tutorial#run-the-notebook">repository setup guide</a> links to the workshop inputs.</p>
 </section>
 </section>
 
@@ -410,16 +412,16 @@
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "francesco-basciani/crystal-eye-acme-tutorial",
+            ref: "7dbbc955a57e2f3938e19b1327837fbccc9c8132",
         },
         codeMirrorConfig: {
-            theme: "abcdef",
+            theme: "default",
             mode: "python"
         },
         kernelOptions: {
             name: "python3",
-            path: "./."
+            path: "book/."
         },
         predefinedOutput: true
     }
