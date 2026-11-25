@@ -18,7 +18,7 @@ Input energy and flux spectra for the background components.
 Particle incidence geometries used for the background calculation.
 ~~~
 
-**CEBackground.cc** processes the simulated interactions and the energy–flux spectra. It produces count-rate histograms by energy for each component and their sum, plus the normalized background counts by detector pixel.
+The background calculation processes the simulated interactions and the energy–flux spectra. It produces count-rate histograms by energy for each component and their sum, plus the normalized background counts by detector pixel.
 
 ~~~{figure} ../figures/background-counts.png
 :alt: Count rate versus energy for the total background and its components
@@ -32,4 +32,4 @@ Simulated detector count rates by energy and background component.
 Background across the detector pixels.
 ~~~
 
-In the notebook, watch how the counts fluctuate before the burst. Estimating and subtracting the mean still leaves positive and negative residuals.
+In the [Python detection exercise](../notebook/Crystal-Eye-ACME-Python.ipynb#2-detection-when-did-the-counts-rise), watch how the counts fluctuate before the burst. Estimating and subtracting the mean still leaves positive and negative residuals.
