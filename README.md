@@ -6,9 +6,11 @@ The Jupyter Book presents the detector, background and response simulations usin
 
 ## Run the notebook
 
+[Launch on Binder](https://mybinder.org/v2/gh/francesco-basciani/crystal-eye-acme-tutorial/81d60271be8130dd3da0866933c0239b1625e72b?urlpath=lab/tree/book/notebook/Crystal-Eye-ACME-Python.ipynb) to open a JupyterLab session with the Python environment and data. Results appear after running the cells.
+
 Use a Jupyter kernel with CERN ROOT (PyROOT), NumPy and Matplotlib. The exercise was previously checked locally with Python 3.14 and PyROOT 6.40.04. Keep the Python module beside the notebook and place the five tutorial input files in `ACMETutorial/` at the repository root, or set `ACME_TUTORIAL_DIR` to the input directory.
 
-The notebook expects `allBackground.root`, `allEffArea.root`, `templates5deg.root`, `temEdepPix2degNew.root` and `upCal.txt`. The Pages edition provides the instructions and source files. Running the cells requires a Python session with those inputs.
+Download `allBackground.root`, `allEffArea.root`, `templates5deg.root`, `temEdepPix2degNew.root` and `upCal.txt` from the [workshop inputs release](https://github.com/francesco-basciani/crystal-eye-acme-tutorial/releases/tag/workshop-data-v1). The Pages edition provides the instructions and source files. Running the cells requires a Python session with those inputs.
 
 ## Build and preview the book
 

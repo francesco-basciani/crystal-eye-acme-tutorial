@@ -8,7 +8,9 @@
 
 Can you spot a gamma-ray burst in a fluctuating background? Use simulated detector data to find the burst and estimate where it came from.
 
-[Open the student notebook →](notebook/Crystal-Eye-ACME-Python.ipynb)
+[Launch on Binder](https://mybinder.org/v2/gh/francesco-basciani/crystal-eye-acme-tutorial/81d60271be8130dd3da0866933c0239b1625e72b?urlpath=lab/tree/book/notebook/Crystal-Eye-ACME-Python.ipynb)
+
+[Read the student notebook](notebook/Crystal-Eye-ACME-Python.ipynb)
 
 [Read the exercise instructions](hands-on.md)
 

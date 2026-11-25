@@ -44,8 +44,7 @@ html[data-theme="dark"] {
 .ce-hero .ce-hero-visual > p { margin: 0; }
 .ce-hero-visual img { display: block; width: 100%; height: auto; }
 .ce-hero a.reference.internal { color: #bdebf1; }
-.bd-article p > a.reference.internal[href$="Crystal-Eye-ACME-Python.html"],
-.bd-article p > a.reference.external[href^="http://127.0.0.1:8891/"] {
+.bd-article p > a.reference.external[href^="https://mybinder.org/v2/gh/"] {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
@@ -56,12 +55,12 @@ html[data-theme="dark"] {
   text-decoration: none;
   transition: background-color 130ms ease;
 }
-.ce-hero p > a.reference.internal[href$="Crystal-Eye-ACME-Python.html"] {
+.ce-hero p > a.reference.external[href^="https://mybinder.org/v2/gh/"] {
   border-color: #b0edf2;
   color: #102730;
   background: #b0edf2;
 }
-.ce-hero p > a.reference.internal[href$="Crystal-Eye-ACME-Python.html"]:hover {
+.ce-hero p > a.reference.external[href^="https://mybinder.org/v2/gh/"]:hover {
   background: #e1fcff;
 }
 .ce-hero a:focus-visible { outline: 2px solid #d1f9ff; outline-offset: 4px; }
