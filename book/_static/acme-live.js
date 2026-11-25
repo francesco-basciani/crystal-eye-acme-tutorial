@@ -1,29 +1,27 @@
-function enableDetectionRun(notebook) {
-  const section = notebook.querySelector("#detection-when-did-the-counts-rise");
-  const cells = Array.from(notebook.querySelectorAll(".thebelab-cell"));
-  const detection = section?.querySelectorAll(".thebelab-cell");
-  const target = detection?.[detection.length - 1];
-  if (!target) return;
+function enableStandaloneRun(section, burstCells, exercise, resultName) {
+  const cells = Array.from(section.querySelectorAll(".thebelab-cell"));
+  const target = cells.pop();
+  if (!target || !cells.length || !burstCells.length) return;
 
-  const index = cells.indexOf(target);
   const editorFor = (cell) => cell.querySelector(".CodeMirror")?.CodeMirror;
   const editor = editorFor(target);
   const runner = Array.from(window.thebelab.cells).find(({ cell }) => cell[0] === target);
   const button = target.querySelector(".thebelab-run-button");
-  if (index < 1 || !editor || !runner || !button) return;
+  const inputs = [...burstCells, ...cells].map(editorFor);
+  if (!editor || !runner || !button || inputs.some((input) => !input)) return;
 
-  function runDetection() {
-    const sources = cells.slice(0, index).map((cell) => editorFor(cell).getValue());
+  function runExercise() {
+    const sources = inputs.map((input) => input.getValue());
     const prepare = sources.map((source, i) =>
       `exec(compile(${JSON.stringify(source)}, "<ACME cell ${i + 1}>", "exec"), globals())`,
     );
-    // Prepare the inputs without showing the burst pixel plot in the Detection output.
+    // Keep setup messages and the burst pixel plot out of the exercise output.
     const code = [
       "from IPython.utils.capture import capture_output",
-      "with capture_output() as detection_preparation:",
+      "with capture_output() as exercise_preparation:",
       ...prepare.map((line) => `    ${line}`),
-      'if globals().get("curve_response") is None:',
-      '    print(detection_preparation.stdout, end="")',
+      `if globals().get("${resultName}") is None:`,
+      '    print(exercise_preparation.stdout, end="")',
       editor.getValue(),
     ].join("\n");
 
@@ -36,13 +34,13 @@ function enableDetectionRun(notebook) {
     }
   }
 
-  button.textContent = "Run Detection";
-  button.title = "Prepare the inputs and plot Detection";
+  button.textContent = `Run ${exercise}`;
+  button.title = `Prepare the inputs and plot ${exercise}`;
   button.addEventListener("click", (event) => {
     event.stopImmediatePropagation();
-    runDetection();
+    runExercise();
   }, true);
-  editor.addKeyMap({ "Shift-Enter": runDetection });
+  editor.addKeyMap({ "Shift-Enter": runExercise });
 }
 
 window.addEventListener("load", () => {
@@ -88,8 +86,16 @@ window.addEventListener("load", () => {
         run.disabled = phase !== "ready";
       }
       if (phase === "ready") {
-        enableDetectionRun(notebook);
-        status.textContent = "Kernel ready. Run Detection on its own or work through the cells in order.";
+        const detection = notebook.querySelector("#detection-when-did-the-counts-rise");
+        const localization = notebook.querySelector("#localization-where-did-the-burst-come-from");
+        const burstCells = [];
+        for (const cell of notebook.querySelectorAll(".thebelab-cell")) {
+          if (detection.contains(cell)) break;
+          burstCells.push(cell);
+        }
+        enableStandaloneRun(detection, burstCells, "Detection", "curve_response");
+        enableStandaloneRun(localization, burstCells, "Localization", "response");
+        status.textContent = "Kernel ready. Run Detection and Localization independently, or work through the cells in order.";
         observer.disconnect();
       } else if (phase === "failed" || phase === "error") {
         status.textContent = "Binder could not start the kernel. Try JupyterLab on Binder.";
