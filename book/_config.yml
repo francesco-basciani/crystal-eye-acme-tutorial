@@ -13,6 +13,7 @@ sphinx:
       - acme-live.js
     thebe_config:
       repository_url: https://github.com/francesco-basciani/crystal-eye-acme-tutorial
+      # Pin the prebuilt PyROOT environment. The page sends its own cell code.
       repository_branch: 7dbbc955a57e2f3938e19b1327837fbccc9c8132
       path_to_docs: book
       codemirror-theme: default

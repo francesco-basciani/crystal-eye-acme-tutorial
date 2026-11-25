@@ -37,6 +37,9 @@ window.addEventListener("load", () => {
     fallback.hidden = false;
     const observer = new MutationObserver(() => {
       const phase = start.querySelector(".status")?.textContent.trim();
+      for (const run of notebook.querySelectorAll(".thebelab-run-button")) {
+        run.disabled = phase !== "ready";
+      }
       if (phase === "ready") {
         status.textContent = "Kernel ready. Run the Python cells from top to bottom.";
         observer.disconnect();
@@ -45,7 +48,7 @@ window.addEventListener("load", () => {
         observer.disconnect();
       }
     });
-    observer.observe(start, { childList: true, subtree: true });
+    observer.observe(notebook, { childList: true, subtree: true });
     initThebe();
   }, { once: true });
 });
