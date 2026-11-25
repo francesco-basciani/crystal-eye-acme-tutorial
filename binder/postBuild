@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Run once when building the image. Student sessions reuse the staged files.
+data_dir=ACMETutorial
+manifest="$PWD/binder/data.sha256"
+mkdir -p "$data_dir"
+if [[ -f binder/data-base-url.txt ]]; then
+    base_url=$(< binder/data-base-url.txt)
+    if [[ "$base_url" != https://* ]]; then
+        echo "binder/data-base-url.txt must name an HTTPS release or data directory." >&2
+        exit 1
+    fi
+    while read -r checksum filename; do
+        curl --fail --location --retry 3 --proto '=https' \
+            "${base_url%/}/$filename" --output "$data_dir/$filename"
+    done < "$manifest"
+fi
+(
+    cd "$data_dir"
+    sha256sum --check "$manifest"
+)
+python -c 'import ROOT; print("PyROOT", ROOT.gROOT.GetVersion())'
