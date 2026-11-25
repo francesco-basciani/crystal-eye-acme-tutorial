@@ -4,7 +4,7 @@
 Run the Python cells from top to bottom to generate a burst, look for it in the counts, and estimate its incoming direction.
 :::
 
-[Open the interactive notebook](notebook/Crystal-Eye-ACME-Python.ipynb) and choose **Enable Run buttons**. Run the cells in order once the kernel is ready.
+[Open the interactive notebook](notebook/Crystal-Eye-ACME-Python.ipynb) and choose **Enable Run buttons**. Once the kernel is ready, use **Run Detection** on the graph cell to prepare the inputs and plot the counts in one step. To explore the full workflow, run the cells in order.
 
 [Open in JupyterLab on Binder](https://mybinder.org/v2/gh/francesco-basciani/crystal-eye-acme-tutorial/03dc63ffdc902c6d959490553bf7f2cc8e98819a?urlpath=lab/tree/book/notebook/Crystal-Eye-ACME-Python.ipynb)
 

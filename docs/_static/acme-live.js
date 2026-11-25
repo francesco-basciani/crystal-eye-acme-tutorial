@@ -1,3 +1,50 @@
+function enableDetectionRun(notebook) {
+  const section = notebook.querySelector("#detection-when-did-the-counts-rise");
+  const cells = Array.from(notebook.querySelectorAll(".thebelab-cell"));
+  const detection = section?.querySelectorAll(".thebelab-cell");
+  const target = detection?.[detection.length - 1];
+  if (!target) return;
+
+  const index = cells.indexOf(target);
+  const editorFor = (cell) => cell.querySelector(".CodeMirror")?.CodeMirror;
+  const editor = editorFor(target);
+  const runner = Array.from(window.thebelab.cells).find(({ cell }) => cell[0] === target);
+  const button = target.querySelector(".thebelab-run-button");
+  if (index < 1 || !editor || !runner || !button) return;
+
+  function runDetection() {
+    const sources = cells.slice(0, index).map((cell) => editorFor(cell).getValue());
+    const prepare = sources.map((source, i) =>
+      `exec(compile(${JSON.stringify(source)}, "<ACME cell ${i + 1}>", "exec"), globals())`,
+    );
+    // Prepare the inputs without showing the burst pixel plot in the Detection output.
+    const code = [
+      "from IPython.utils.capture import capture_output",
+      "with capture_output() as detection_preparation:",
+      ...prepare.map((line) => `    ${line}`),
+      'if globals().get("curve_response") is None:',
+      '    print(detection_preparation.stdout, end="")',
+      editor.getValue(),
+    ].join("\n");
+
+    // Thebe snapshots the current document before sending it to the kernel.
+    const original = editor.swapDoc(new window.CodeMirror.Doc(code, "python"));
+    try {
+      runner.execute();
+    } finally {
+      editor.swapDoc(original);
+    }
+  }
+
+  button.textContent = "Run Detection";
+  button.title = "Prepare the inputs and plot Detection";
+  button.addEventListener("click", (event) => {
+    event.stopImmediatePropagation();
+    runDetection();
+  }, true);
+  editor.addKeyMap({ "Shift-Enter": runDetection });
+}
+
 window.addEventListener("load", () => {
   const notebook = document.querySelector("#crystal-eye-acme-hands-on-in-python");
   if (!notebook || !notebook.querySelector(".cell_input")) return;
@@ -41,7 +88,8 @@ window.addEventListener("load", () => {
         run.disabled = phase !== "ready";
       }
       if (phase === "ready") {
-        status.textContent = "Kernel ready. Run the Python cells from top to bottom.";
+        enableDetectionRun(notebook);
+        status.textContent = "Kernel ready. Run Detection on its own or work through the cells in order.";
         observer.disconnect();
       } else if (phase === "failed" || phase === "error") {
         status.textContent = "Binder could not start the kernel. Try JupyterLab on Binder.";
