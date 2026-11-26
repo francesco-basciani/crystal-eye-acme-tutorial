@@ -13,7 +13,7 @@ Binder opens the notebook in JupyterLab with PyROOT and the workshop inputs read
 If Binder reports a launch error, [start a fresh session on the alternate server](https://2i2c.mybinder.org/v2/gh/francesco-basciani/crystal-eye-acme-tutorial/03dc63ffdc902c6d959490553bf7f2cc8e98819a?urlpath=lab/tree/book/notebook/Crystal-Eye-ACME-Python.ipynb).
 
 1. Run the setup cell once. In **Generate a burst**, run the default parameters, then try a zenith angle of **45°** or reduce the amplitude by a factor of ten.
-2. In **Detection**, look for the burst in the noisy counts. Set **reveal_injected = True** and rerun the plot to compare your interpretation with the injected signal.
+2. In **Detection**, compare the noisy 250 ms bins with the running 8 s counts and S/N. Set **reveal_injected = True** to add the expected total to the short-bin plot.
 3. In **Localization**, compare the reconstructed detector-frame angles with the injected direction. The plot shows the retained templates and the reconstructed direction.
 
 See the seminar pages for [Sensitivity](seminar/slide-16.md), [Detection](seminar/slide-20.md) and [Localization](seminar/slide-23.md).
