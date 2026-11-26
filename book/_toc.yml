@@ -44,6 +44,11 @@ parts:
             title: Onboard neural-network localization
           - file: seminar/slide-28
           - file: seminar/slide-29
+  - caption: Crystal Eye Digital Twin
+    chapters:
+      - file: digital-twin/overview
+      - file: digital-twin/detection-localization
+      - file: digital-twin/simulator
   - caption: Workshop reference
     chapters:
       - file: theory/detector

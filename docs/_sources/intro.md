@@ -54,6 +54,10 @@ Compare the pixel pattern with simulated templates and inspect the angular separ
 
 Follow the [seminar from the cover](seminar/slide-01.md) or choose a section from the table of contents. The 29 pages follow the PowerPoint order, including its seven section dividers.
 
+## Crystal Eye Digital Twin
+
+Follow [the virtual instrument](digital-twin/overview.md) from its orbit to the reconstructed direction, then [run the simulator in the book](digital-twin/simulator.md).
+
 ## Workshop reference
 
 The exercise uses simulation inputs described in the [detector geometry](theory/detector.md), [orbital background](theory/background.md) and [response templates](theory/response.md) chapters.

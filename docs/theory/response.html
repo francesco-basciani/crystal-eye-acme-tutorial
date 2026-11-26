@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=6a604523" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=2a09de60" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=8f754a71" />
   
   <!-- So that users can add custom icons -->
   <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
@@ -267,6 +267,12 @@
 </ul>
 </details></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Crystal Eye Digital Twin</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../digital-twin/overview.html">The Crystal Eye Digital Twin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../digital-twin/detection-localization.html">Detection and localization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../digital-twin/simulator.html">Run the simulator</a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Workshop reference</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="detector.html">Detector simulation</a></li>
@@ -446,13 +452,13 @@
 <figure class="align-default" id="id1">
 <img alt="Diagram with square photon source planes at different angles to the detector" src="../_images/effective-area-geometry.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 50 </span><span class="caption-text">Source plane geometry used for the effective-area simulations.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 51 </span><span class="caption-text">Source plane geometry used for the effective-area simulations.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id2">
 <img alt="Effective area in square centimeters across photon energy and detector zenith angle" src="../_images/effective-area-curves.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 51 </span><span class="caption-text">Effective-area map in the supplied outline.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 52 </span><span class="caption-text">Effective-area map in the supplied outline.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -462,7 +468,7 @@
 <figure class="align-default" id="id3">
 <img alt="Grid of simulated reference directions spanning the detector field of view" src="../_images/template-directions.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 52 </span><span class="caption-text">Reference directions used to build the template bank.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 53 </span><span class="caption-text">Reference directions used to build the template bank.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The <a class="reference internal" href="../notebook/Crystal-Eye-ACME-Python.html"><span class="std std-doc">Python burst generator</span></a> uses this bank to produce a detector energy spectrum and a count-rate distribution by pixel for a chosen direction and cut-off power law. Localization uses the separate <strong>2° template bank</strong> supplied with the tutorial. It compares the expected source pattern with templates using ROOT’s Kolmogorov–Smirnov histogram test and combines the retained directions.</p>

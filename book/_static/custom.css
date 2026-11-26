@@ -199,3 +199,18 @@ html[data-theme="dark"] {
 .ce-seminar-figure .caption-number {
   display: none;
 }
+
+.ce-simulator-embed {
+  margin-block: 1.25rem 2rem;
+  overflow: hidden;
+  border: 1px solid var(--ce-border);
+  border-radius: .75rem;
+  background: var(--pst-color-surface);
+}
+
+.ce-simulator-embed iframe {
+  display: block;
+  width: 100%;
+  height: clamp(32rem, 79vh, 60rem);
+  border: 0;
+}
