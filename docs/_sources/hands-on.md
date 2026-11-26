@@ -16,6 +16,8 @@ If Binder reports a launch error, [start a fresh session on the alternate server
 2. In **Detection**, look for the burst in the noisy counts. Set **reveal_injected = True** and rerun the plot to compare your interpretation with the injected signal.
 3. In **Localization**, compare the reconstructed detector-frame angles with the injected direction. The plot shows the retained templates and the reconstructed direction.
 
+See the seminar pages for [Sensitivity](seminar/slide-16.md), [Detection](seminar/slide-20.md) and [Localization](seminar/slide-23.md).
+
 ## Run locally
 
 To work in your own Jupyter environment, download the {download}`notebook <notebook/Crystal-Eye-ACME-Python.ipynb>`. The Python implementations are included in its cells. The [repository setup guide](https://github.com/francesco-basciani/crystal-eye-acme-tutorial#run-the-notebook) links to the workshop inputs.

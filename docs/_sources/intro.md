@@ -50,6 +50,10 @@ Compare the pixel pattern with simulated templates and inspect the angular separ
 
 ::::
 
-## Detector and simulation
+## Seminar
 
-Start with the [detector geometry](theory/detector.md), then see how the simulations produce the [orbital background](theory/background.md) and [response templates](theory/response.md). The theory pages use the figures from Ritabrata’s tutorial outline.
+Follow the [seminar from the cover](seminar/slide-01.md) or choose a section from the table of contents. The 29 pages follow the PowerPoint order, including its seven section dividers.
+
+## Workshop reference
+
+The exercise uses simulation inputs described in the [detector geometry](theory/detector.md), [orbital background](theory/background.md) and [response templates](theory/response.md) chapters.

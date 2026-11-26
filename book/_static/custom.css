@@ -163,3 +163,39 @@ html[data-theme="dark"] {
 .ce-live-controls .ce-live-status {
   flex: 1 1 15rem;
 }
+
+.ce-slide-figures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  align-items: center;
+  gap: 1.15rem;
+  margin-block: 1.4rem;
+}
+.ce-slide-figures img {
+  width: 100%;
+  height: auto;
+  max-height: 28rem;
+  padding: .4rem;
+  object-fit: contain;
+  border: 1px solid var(--ce-border);
+  border-radius: .4rem;
+  background: white;
+}
+.ce-slide-figures img.ce-slide-small {
+  width: auto;
+  max-width: min(100%, 10rem);
+  max-height: 7rem;
+  justify-self: center;
+}
+
+.bd-article figure.ce-seminar-figure img {
+  display: block;
+  max-width: 100%;
+  max-block-size: none;
+  margin-inline: auto;
+  border: 1px solid var(--ce-border);
+}
+
+.ce-seminar-figure .caption-number {
+  display: none;
+}

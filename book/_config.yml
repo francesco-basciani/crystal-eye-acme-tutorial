@@ -8,6 +8,7 @@ exclude_patterns: [_build, README.md, "**/.ipynb_checkpoints", ".DS_Store"]
 sphinx:
   config:
     html_show_sourcelink: false
+    html_extra_path: [_redirects]
     myst_heading_anchors: 3
     html_js_files:
       - acme-live.js

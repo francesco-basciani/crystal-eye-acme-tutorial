@@ -1,7 +1,50 @@
 format: jb-book
 root: intro
 parts:
-  - caption: Theory
+  - caption: ACME Seminar
+    chapters:
+      - file: seminar/slide-01
+      - file: seminar/slide-02
+        sections:
+          - file: seminar/slide-03
+          - file: seminar/slide-04
+          - file: seminar/slide-05
+          - file: seminar/slide-06
+      - file: seminar/slide-07
+        sections:
+          - file: seminar/slide-08
+          - file: seminar/slide-09
+          - file: seminar/slide-10
+          - file: seminar/slide-11
+      - file: seminar/slide-12
+        sections:
+          - file: seminar/slide-13
+            title: In-orbit background model
+      - file: seminar/slide-14
+        sections:
+          - file: seminar/slide-15
+            title: Effective area calculation
+      - file: seminar/slide-16
+        sections:
+          - file: seminar/slide-17
+          - file: seminar/slide-18
+          - file: seminar/slide-19
+      - file: seminar/slide-20
+        sections:
+          - file: seminar/slide-21
+          - file: seminar/slide-22
+      - file: seminar/slide-23
+        sections:
+          - file: seminar/slide-24
+            title: Transient localization methods
+          - file: seminar/slide-25
+          - file: seminar/slide-26
+            title: Neural-network input processing
+          - file: seminar/slide-27
+            title: Onboard neural-network localization
+          - file: seminar/slide-28
+          - file: seminar/slide-29
+  - caption: Workshop reference
     chapters:
       - file: theory/detector
       - file: theory/background
